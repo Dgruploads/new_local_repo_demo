@@ -7,7 +7,12 @@ variable "instance_type_name" {
   default = "t2.micro"
 }
 
+variable "instance_image" {
+  type = string
+  default = "ami-12345"
+}
+
 resource "aws_instance" "demo_instance" {
   instance_type = var.instance_type_name
-  ami           = "ami-12345"
+  ami           = var.instance_image
 }
