@@ -16,7 +16,7 @@ resource "aws_instance" "demo_instance" {
 }
 
 output "instance_public_ip_addr" {
-#  value = aws_instance.demo_instance.public_ip
+  value = aws_instance.demo_instance.public_ip
 }
 
 output "instance_availability_zone" {
