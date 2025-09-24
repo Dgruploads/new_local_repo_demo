@@ -19,10 +19,15 @@ resource "aws_instance" "demo_instance_1" {
   ami           = var.instance_image
 }
 
+resource "aws_instance" "demo_instance_2" {
+  instance_type = var.instance_type_name
+  ami           = var.instance_image
+}
+
 output "instance_public_ip_addr" {
   value = aws_instance.demo_instance.public_ip
 }
 
 output "instance_availability_zone" {
-  value = aws_instance.demo_instance_1.availability_zone
+  value = aws_instance.demo_instance_2.availability_zone
 }
