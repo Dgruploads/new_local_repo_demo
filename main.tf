@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.region_name
 }
 
 variable "instance_type_name" {
@@ -7,6 +7,10 @@ variable "instance_type_name" {
 }
 
 variable "instance_image" {
+  type = string
+}
+
+variable "region_name" {
   type = string
 }
 
