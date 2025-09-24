@@ -24,5 +24,5 @@ output "instance_public_ip_addr" {
 }
 
 output "instance_availability_zone" {
-  value = aws_instance.demo_instance.availability_zone
+  value = aws_instance.demo_instance_1.availability_zone
 }
